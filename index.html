@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator Vanilla JS</title>
     <!-- stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tektur&display=swap"
+      rel="stylesheet"
+    />
     <!-- script -->
     <script src="script.js" defer></script>
-</head>
-<body>
-    
-    
-</body>
+  </head>
+  <body>
+    <div class="calculator-grid">
+      <div class="output">
+        <div data-previous-operand class="previous-operand">323</div>
+        <div data-current-operand class="current-operand">32323</div>
+      </div>
+
+      <!-- buttons -->
+      <button data-all-clear class="span-two">AC</button>
+
+      <button data-delete>DEL</button>
+
+      <button data-operation>/</button>
+
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+
+      <button data-operation>&times;</button>
+
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+
+      <button data-operation>&plus;</button>
+
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+
+      <button data-operation>&minus;</button>
+
+      <button data-number>.</button>
+      <button data-number>0</button>
+       
+      <button data-equals class="span-two">&equals;</button>
+    </div>
+  </body>
 </html>
