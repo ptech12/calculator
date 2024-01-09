@@ -19,13 +19,17 @@ class Calculator{
 
     // appends to output screen
     appendNumber(number){
+
+        // only one period is allowed
+        if(number === '.' && this.currentOperand.includes('.')) return
+
         this.currentOperand = (this.currentOperand ? this.currentOperand.toString() : ' ')  + number.toString();
 
     }
 
     // chooses the specified operation by the user
     chooseOperation(operation) {
-
+         
     }
 
     // computes the value based on the two numbers
@@ -61,6 +65,14 @@ const calculator = new Calculator(previousOperandTextElement, currentOperandText
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
         calculator.appendNumber(button.innerText);
+        calculator.updateDisplay();
+
+    })
+})
+
+operationButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        calculator.chooseOperation(button.innerText);
         calculator.updateDisplay();
 
     })
